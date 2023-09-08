@@ -1,0 +1,544 @@
+.class1{
+     
+    border: 0;
+    height: 1.2px;
+    margin: 5% 43%;
+    width: 15%;
+    border-top: 4px dotted #9c97f1;
+    opacity:0.5;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background-color:rgb(0, 0, 33);
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    
+}
+nav a{
+   display: inline-block;
+    opacity: 0; 
+    animation: slideTop .9s ease forwards;
+    transition: .5s ease;
+    animation-delay: calc(.2s * var(--i));
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(18, 18, 62);
+}
+nav ul{
+    justify-content: center;
+    display: flex;
+    transition: 0.2s linear;
+}
+
+nav ul li {
+
+    list-style: none;
+    margin :0 23px;
+}
+nav ul li a,.footer-second ul li a{
+    text-decoration: none;
+    color: white;
+}
+nav ul li a:hover{
+    color: rgb(153, 153, 226);
+    font-size: 14.5px;
+   
+
+}
+main hr{
+    background-color:#9c97f1;
+    border: 0;
+    height: 1.2px;
+    margin: 40px 140px;
+   
+  
+}
+
+.left{
+    font-size: 1.5rem;
+    position: relative; 
+    color: #fff; 
+    text-decoration: none; 
+    cursor: default; 
+    animation: slideRight 1s ease forwards;
+}
+.firstsec ,.secsec{
+    display: flex;
+    justify-content: space-around;
+    margin: 110px 0;
+  
+}
+.firstsec >div{  /* > div  the greator sign indicate the first div only*/
+            width: 40%;           
+}
+.leftsec{
+    font-size: 2.5rem;
+    margin:70px 0;
+    
+
+}
+.leftsecslide{
+    opacity: 0; 
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1.4s;
+}
+main p{
+    opacity: 0; 
+    animation: slideBottom .9s ease forwards;
+    animation-delay: .5s;
+}
+.rightsec img{
+    width: 80%;
+    opacity: 0; 
+    animation: slideLeft .9s ease forwards;
+    animation-delay: .5s;
+   
+}
+
+.purple{
+    color: rgb(170, 107, 228);
+}
+
+
+.secsec{
+    max-width: 80pw;
+    margin: auto;
+
+}
+.about_myinfo{
+    margin:70px 0;
+}
+.rightsec2{
+    width: 60%;
+    margin: 30px 80px;
+}
+main h2{
+    color:#59c378;
+}
+main h3{
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 40px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    width: 490px;
+}
+main .about_myinfo a{
+    margin-top: 40px;
+}
+
+.icon{
+    margin: 10px;
+}
+
+
+
+
+/* swiper  slider   */
+.progress-title{
+    text-align: center;
+    margin-top: 80px;
+}
+.progress-title h3{
+    text-transform: capitalize;
+    width:100%;
+}
+
+
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+    margin: auto;
+  
+  }
+  .wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: rgb(170, 107, 228);
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+    margin: 10px 107px;
+  }
+  .wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  .wrapper i:first-child{
+    left: -22px;
+  }
+  .wrapper i:last-child{
+    right: -22px;
+  }
+  .wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    margin: 80px 110px;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+  .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+  .carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel .card {
+    scroll-snap-align: start;
+    height: 260px;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 26px;
+ 
+  }
+  .carousel .card .img {
+    background:#8B53FF;
+    height: 148px;
+    width: 148px;
+    border-radius: 50%;
+  }
+  .card .img img {
+    width: 140px;
+    height: 140px;
+    border-radius: 60%;
+    object-fit: cover;
+    border: 4px solid #fff;
+  }
+  .carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+  }
+  .carousel .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .wrapper .carousel {
+      grid-auto-columns: calc((100% / 2) - 9px);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .wrapper .carousel {
+      grid-auto-columns: 100%;
+    }
+  }
+
+  /* animation  in home */
+
+  .leftsec a{
+    opacity: 0; 
+    animation: slideTop .9s ease forwards;
+    animation-delay: .5s;
+  }
+  .home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+     width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color:#0ef; 
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+    opacity: 0; 
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    }
+    .home-sci a:hover {
+        background:#0ef;
+        color: #881b29;
+        box-shadow: 0 0 20px #0ef;
+        }
+    .btn-box{
+         display: inline-block;
+        padding: 12px 28px;
+        background: #8ef; border-radius: 40px;
+        font-size: 16px;
+        color: #081b29; 
+        
+        letter-spacing:T1px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+   .btn-box:hover{
+    box-shadow: 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan,0 0 200px cyan
+
+}
+
+@keyframes slideRight {
+    0% {
+    transform: translateX(-100px); opacity: 0;
+    }
+    100% {
+    transform: translateX(0px); opacity: 1;
+    }
+}
+@keyframes slideLeft {
+    0% {
+    transform: translateX(100px); 
+    opacity: 0;
+    }
+    100% {
+    transform: translateX(0px); opacity: 1;
+    }
+}
+@keyframes slideTop {
+    0%{
+    transform: translateY(100px); 
+    opacity: 0;
+    }
+    100% {
+    transform: translateY(0px); opacity: 1;
+    }
+}
+@keyframes slideBottom {
+    0%{
+    transform: translateY(-100px); 
+    opacity: 0;
+    }
+    100% {
+    transform: translateY(0px); opacity: 1;
+    }
+}
+
+
+
+/* project section  */
+
+
+.text-gray{
+    color: grey;
+}
+.secondSection {
+    max-width: 80vw;
+    margin: auto;
+    height: 70vh;
+    }
+.secondSection h1 {
+     font-size: 1.9rem;
+}
+.secondSection .box {
+    background:white;
+    width: 80vw;
+    height: 2px;
+    margin: 56px 0;
+    display: flex;
+}
+.secondSection .vertical{
+    height: 93px;
+    width: 1px;
+    background-color: white;
+    margin: 0 100px;
+    }
+
+    .image-top {
+        width: 40px;
+        position: relative;
+        top: -38px;
+        left: -9px;
+    }
+
+    .vertical-title {
+        position: relative;
+        top: 75px;
+        width: 150px;
+        font-size: 18px;
+    }
+
+    .vertical-desc {
+        position: relative;
+        top: 86px;
+        color: grey;
+        width: 150px;
+        font-size: 11px;
+       
+    }
+
+    /*  footer section*/
+    footer{
+        background-color:#0f0f34;
+        }
+
+    .footer{
+        display: flex;
+        padding: 23px 122px;
+        justify-content: space-evenly;
+        }
+        .footer ul{
+            list-style: none;
+        }
+        .footer >div{
+            width: 223px;
+            padding: 1rem;
+        }
+    footer .footer-center{
+        text-align: center;
+        color: grey;
+        padding: 18px 0;
+    }
+
+    /*  form section */
+
+
+
+    .contact{
+
+         display: flex;
+        grid-template-columns: repeat (2, 1fr);
+       gap: 3rem;
+        font-size: 2.5rem;
+         margin:70px 150px;
+        }
+
+    .contact-text h2{
+        font-size: 30px;
+        line-height: 1;
+        position:static;
+        top: 50%;
+        left: 50%;
+        transform: translate(140%,-63%);
+        padding: 10px;
+       
+        }
+
+    .contact-text h2 span{
+        color:#0ef;
+      
+        
+        }
+    
+        .contact-text h4{
+            text-align: center;
+            margin: 15px 0;
+            color: rgb(228,228,228);
+            font-size: 25px;
+            font-weight: 600;
+            }
+        .contact-text p{
+            text-align: center;
+            font-size: 20px;
+            color: rgb(177, 177, 177); 
+             margin-bottom: 2rem;
+            
+            }
+           
+         
+            .contact-list li{
+                text-align: center;
+                margin-bottom: 10px; 
+                display: block;
+                font-size: 20px;
+
+                } 
+                
+
+                .contact-icons i{
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center; width: 40px;
+                    height: 40px;
+                    background: transparent;
+                    border: 2px solid #0ef;
+                    border-radius: 50%; font-size: 20px;
+                    color:#0ef;
+                    text-decoration: none;
+                    margin: 30px 15px 30px 0;
+                    transition: .5s ease; opacity: 0;
+                    animation: slideLeft is ease forwards; animation-delay: calc(.2s var(--i));
+                    }
+                .contact-icons i:hover{
+                    background: #0ef;
+                    color:#ad3333;
+                    box-shadow: 0 0 20px #0ef;
+                }
+
+                .contact-form {
+                    position: relative;
+                    margin-top: 40px;;
+                    } 
+                    .contact-form form input, form textarea{
+                    border: none;
+                    outline: none;
+                    width: 69%;
+                    padding: 18px;
+                    background: #dcdcdc;
+                  
+                    font-size: 1rem; font-weight: 600;
+                    margin-bottom: 0.5rem;
+                    margin-right: 50px;
+                    
+                    border-radius: 0.5rem;
+                    }
+                    .contact-form textarea{
+                    resize: none;
+                    height: 220px;
+                    }
+                     .contact-form form .send {
+                    
+                    padding: 14px 60px;
+                    background:#0ef; 
+                    border-radius: 40px;
+                    font-size: 18px; 
+                   
+                    letter-spacing: 1px;
+                    text-decoration: none; 
+                    font-weight: 600;
+                    opacity: 0.75;
+                    animation-delay: .5s;
+                    animation: slideTop is ease forwards;
+                  
+                    box-shadow: 0 0 5px #0ef,
+                    0 0 25px #0ef;
+                     }
+                     .icon-mid{
+                        margin: auto;
+                     }
